@@ -11,7 +11,7 @@ Crie uma pasta no seu explorador de arquivos ou pelo terminal com o nome que des
 Abra o terminal do VSCode e rode os seguintes comandos:<br>
   npm init --yes //Iniciar aplicação<br>
   npm install -D cypress //Instalar cypress<br>
-  npm install faker-br //Intalar biblioteca faker-br<br>
+  npm install faker-br //Instalar biblioteca faker-br<br>
 
 4. Rodar projeto <br>
 Antes de rodar o projeto, é preciso ir ao diretório Cypress > support > command.js e atualizar a chave cookie para conseguir passar pela validação captcha.<br>
