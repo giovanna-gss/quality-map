@@ -6,13 +6,14 @@ Link para download: https://nodejs.org/en/download/prebuilt-installer
 2. Instalar Visual Studio Code
 Link para download: https://code.visualstudio.com/Download
 
-3. Iniciar projeto
+3. Iniciar projeto e instalar Cypress
 Crie uma pasta no seu explorador de arquivos ou pelo terminal com o nome que desejar e abra ela no VSCode.
 Abra o terminal do VSCode e rode os seguintes comandos:
   npm init --yes //Iniciar aplicação
   npm install -D cypress //Instalar cypress
   npm install faker-br //Intalar biblioteca faker-br
 
-Para abrir o cypress, no terminal do VS rode o comando abaixo:
-  npx cypress open
-  Escolha a opção E2E Testing, o navegador e clique no botão "Start E2E Testing in Chrome".
+4. Rodar projeto
+Antes de rodar o projeto, é preciso ir ao diretório Cypress > support > command.js e atualizar a chave cookie para conseguir passar pela validação captcha.
+Essa chave é encontrada no próprio site https://demo.nopcommerce.com/ no inspecionar, na área Application, no arquivo cookies com nome cf_clearance.
+Depois disso rode o comando "npx Cypress open", sem as aspas, no terminal do VSCode, escolha a opção E2E Testing, o navegador de preferência e clique no botão "Start E2E Testing in []".
