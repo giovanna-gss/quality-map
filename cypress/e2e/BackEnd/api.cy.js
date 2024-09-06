@@ -1,14 +1,14 @@
-const faker = require('faker-br') //Biblioteca do fake
+const faker = require('faker-br') 
 
-var token = '' //Variável do token
-var id = '' //Variável id do usuário
-const nome = faker.name.firstName() //A variável nome recebe um nome fake
-const email = nome + "@qa.com.br" //A variável email recebe o nome mais final de e-mail
-const url = 'https://serverest.dev' //Local da API
+var token = '' 
+var id = '' 
+const nome = faker.name.firstName() 
+const email = nome + "@qa.com.br" 
+const url = 'https://serverest.dev' 
 
 describe('api', () => {
 
-  it('Login OK', () => {
+  it('Login', () => {
     cy.request({
       method: 'POST',
       url: url + "/login",

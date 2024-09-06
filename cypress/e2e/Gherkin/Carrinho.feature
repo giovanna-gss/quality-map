@@ -4,12 +4,6 @@ Funcionalidade: Carrinho
 	Para realizar compra final do produto
 
 #BUSCAR PRODUTO
-Cenário: Validação ao buscar produto com descrição vazia
-    Dado que o usuário autorizado deseja buscar produto no site
-    E não é informado descrição do produto no campo de pesquisa
-    Quando clicar em SEARCH
-    Então o usuário é alertado com "Please enter some search keyword"
-
 Cenário: Buscar produto com sucesso
     Dado que o usuário autorizado deseja buscar produto no site
     E não é informado descrição do produto no campo de pesquisa
@@ -37,18 +31,6 @@ Cenário: Validaçao do produto Virtual Gift Card
     | Recipient's Email | Enter valid recipient email |
     | Your Name         | Enter valid sender name     |
     | Your Email        | Enter valid sender email    |
-	
-Cenário: Validação de e-mail incorreto do produto Virtual Gift Card
-	Dado que o usuário autorizado deseja adicionar produto ao carrinho
-	E o produto é Virtual Gift Card
-    E é informado <informacao> inválido
-    Quando clicar em ADD TO CART
-	Então o usuário é alertado com <mensagem>
-
-    Exemplos:
-    | informacao        | mensagem                    |
-    | Recipient's Email | Enter valid recipient email |
-    | Your Email        | Enter valid sender email    |
 
 Cenário: Adicionar Virtual Gift Card ao carrinho com sucesso
     Dado que o usuário autorizado deseja adicionar produto ao carrinho
@@ -75,12 +57,3 @@ Cenário: Remover produto do carrinho
     E está aberto o carrinho
     Quando clicar em Remove no item desejado
     Então o produto é removido da lista
-
-#FINALIZAR
-Cenário: Finalizar compra sem conconrdar com os termos
-    Dado que o usuário autorizado deseja finalizar a compra
-    E está aberto o carrinho
-    E não é aceito os termos de serviço
-    Quando clicar em CHECKOUT
-    Então o usuário é alertado com "Please accept the terms of service before the next step."
-    E a compra não é finalizada

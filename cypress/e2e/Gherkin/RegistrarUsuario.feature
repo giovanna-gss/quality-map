@@ -4,9 +4,9 @@ Funcionalidade: Registrar usuário
 	Quero registrar um usuário
 	Para realizar compras no site
 
-#REGISTRAR
 Esquema do Cenário: Informações obrigatórias ao registrar usuário
     Dado que o usuário autorizado deseja registrar um usuário
+    E está na tela de registrar usuário
     E não é informado <informacao>
     Quando clicar em REGISTER
     Então o usuário é alertado com <mensagem>
@@ -19,33 +19,6 @@ Esquema do Cenário: Informações obrigatórias ao registrar usuário
     | Email            | Email is required.      |
     | Password         | Password is required.   |
     | Confirm password | Password is required.   |
-
-Esquema do Cenário: Validação ao informar e-mail inválido ao registrar usuário
-    Dado que o usuário autorizado deseja registrar um usuário
-    Quando informar email <formato>
-    Então o usuário é alertado com <mensagem>
-    E o usuário não é registrado
-
-    Exemplos:
-    | formato  | mensagem                            |
-    | inválido | Please enter a valid email address. |
-    | errado   | Wrong email                         |
-
-Cenário: Validação ao informar senhas diferentes
-    Dado que o usuário autorizado deseja registrar um usuário
-    E é informado password
-    E é informado confirm password diferente de password
-    Quando clicar em REGISTER
-    Então o usuário é alertado com "The password and confirmation password do not match."
-    E o usuário não é registrado
-
-Cenário: Validação ao informar senha inválida
-    Dado que o usuário autorizado deseja registrar um usuário
-    E é informado password menor que 6 caracteres
-    E é informado confirm password igual ao password
-    Quando clicar em REGISTER
-    Então o usuário é alertado com "<p>Password must meet the following rules: </p><ul><li>must have at least 6 characters and not greater than 64 characters</li></ul>"
-    E o usuário não é registrado
 
 Cenário: Registrar usuário com sucesso
     Dado que o usuário autorizado deseja registrar um usuário

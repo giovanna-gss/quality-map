@@ -11,6 +11,12 @@ Cenário: Adicionar produto na lista de desejo
     Então o usuário é alertado com "The product has been added to your wishlist"
     E o produto é adicionado na lista
 
+#VISUALIZAR LISTA DE DESEJO
+Cenário: Visualizar lista de desejo
+    Dado que o usuário autorizado deseja visualizar lista de desejo
+    Quando clicar no botão Whishlist
+    Então é apresentado produtos na lista
+
 #REMOVER ITEM DA LISTA DE DESEJO
 Cenário: Remover produto da lista de desejo
     Dado que o usuário autorizado deseja remover produto da lista de desejo
