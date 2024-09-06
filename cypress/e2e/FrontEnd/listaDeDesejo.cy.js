@@ -1,7 +1,3 @@
-const faker = require('faker-br') 
-
-const nome = faker.name.firstName()
-
 context('Quality Map', () => {
 
     before(() => {  
